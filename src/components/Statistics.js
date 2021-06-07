@@ -3,20 +3,23 @@ import DataStatistics from './DataStatistics';
 import PropTypes from "prop-types";
 
 
-const StatisticTable = (stats, title) => {
+const StatisticTable = ({title, stats}) => {
     return (
-<section class="statistics">
-  <h2 class="title">{title}</h2>
+ <section className="statistics">
 
-  <ul class="stat-list">
-    {stats.map((data) => (
-   <li class="item" key = {data.id}>
-     <DataStatistics
-     label = {data.label}
-     percentage = {data.percentage}
-     />
-  </li>
-    ))}
+    <h2 className="title">{!!title ? title : " "}</h2>
+
+  <ul className="stat-list">
+    {
+    stats.map((data) => (
+      <li className="item" key = {data.id}>
+        <DataStatistics
+        label = {data.label}
+        percentage = {data.percentage}
+        />
+      </li>
+    ))
+    }
     
   </ul>
 </section>
@@ -26,11 +29,12 @@ const StatisticTable = (stats, title) => {
 
 // StatisticTable.protoType = {
 //   stats: PropTypes.arrayOf(
-  // PropTypes.shape({
+//   PropTypes.shape({
 //     id: PropTypes.string.isRequired,
-//     label: PropTypes.string.isRequired,
-//     percentage: PropTypes.string.isRequired
-//   })).isRequired,
+//     // label: PropTypes.string.isRequired,
+//     // percentage: PropTypes.string.isRequired
+//   })
+//   ).isRequired,
 // }
 
 export default StatisticTable;

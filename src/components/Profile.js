@@ -32,4 +32,18 @@ const User = ({name, tag, location, avatar, stats }) => {
 </div>)
 }
 
+// User.defaultProps = {
+//   avatar:
+// }
+
+// User.PropTypes = {
+//   name: PropTypes.string.isRequired,
+//   tag: PropTypes.string.isRequired,
+//   location: PropTypes.string.isRequired,
+//   avatar: PropTypes.string,
+//   // stats:
+//   // stats.followers:
+
+// };
+
 export default User;
