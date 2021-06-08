@@ -2,12 +2,12 @@ import React from 'react';
 import user from './user.json';
 import statisticalData from './statistical-data.json';
 import friends from './friends.json';
-import Profile from "./components/Profile";
+import transactions from './transactions.json';
+import Profile from "./components/Profile/Profile"
 import Statistics from "./components/Statistics";
-import FriendList from "./components/FriendList";
+import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from "./components/TransactionHistory";
 
-console.log(Statistics);
-console.log(statisticalData);
 const App = () => {
     return (
         <div>
@@ -18,9 +18,14 @@ const App = () => {
         location = {user.location}
         avatar = {user.avatar}
         />
+        
         <Statistics title="Upload stats" stats={statisticalData} />
+
         <FriendList 
-        friends={friends} />,
+        friends={friends} />
+
+        <TransactionHistory 
+        items={transactions} />
         </div>
 
     )
