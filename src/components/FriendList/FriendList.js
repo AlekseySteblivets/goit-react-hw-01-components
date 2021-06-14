@@ -21,17 +21,12 @@ const FriendList = ({friends}) => {
 }
 
 
-// outline: 1px solid tomato
-// !!title ? title : " "
+FriendList.propTypes = {
+    id: PropTypes.number.isRequired,
+    isOnline: PropTypes.bool,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+};
+
 export default FriendList;
 
-// {
-//     stats.map((data) => (
-//       <li className="item" key = {data.id}>
-//         <DataStatistics
-//         label = {data.label}
-//         percentage = {data.percentage}
-//         />
-//       </li>
-//     ))
-//     }
