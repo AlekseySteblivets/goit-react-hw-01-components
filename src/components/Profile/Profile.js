@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultImg from '.././img/defolt.jpg'
+import defaultImg from '../../img/defolt.jpg';
 import styles from './Profile.module.css';
 console.log(defaultImg);
 
@@ -36,9 +36,9 @@ const User = ({name, tag, location, avatar, stats }) => {
 </div>)
 }
 
-// User.defaultProps = {
-//   avatar: defaultImg,
-// };
+User.defaultProps = {
+  avatar: defaultImg,
+};
 
 User.propTypes = {
   name: PropTypes.string.isRequired,

@@ -8,7 +8,8 @@ const FriendList = ({friends}) => {
         <ul className={styles.friend}>
             {friends.map(({id, isOnline, avatar, name}) => (
                 <li className={styles.item} key={id}>
-                    <span className="status">{isOnline}</span>
+                    <span className={styles.status} style={{
+                    backgroundColor: `${isOnline ? 'green' : 'red'}`,}}>{isOnline}</span>
                     <img className="avatar" src={avatar} alt={name} width="48" />
                     <p className="name">{name}</p>
                 </li>
@@ -20,6 +21,8 @@ const FriendList = ({friends}) => {
 }
 
 
+// outline: 1px solid tomato
+// !!title ? title : " "
 export default FriendList;
 
 // {
